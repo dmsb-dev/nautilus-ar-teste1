@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nautilus Decor AR - Copo de Acrílico</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Nautilus Decor AR</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Georgia, serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a1628;
             color: #f4f1ea;
             display: flex;
@@ -18,50 +19,112 @@
             padding: 20px;
             text-align: center;
         }
-        .logo { font-size: 4rem; margin-bottom: 10px; }
-        h1 { color: #d4af37; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px; }
-        .product-name { color: #a0b4c8; font-size: 1.1rem; margin-bottom: 10px; }
-        p { color: #a0b4c8; font-size: 0.9rem; margin-bottom: 30px; max-width: 300px; line-height: 1.5; }
-        .ar-link {
-            display: block;
+        .logo { 
+            font-size: 4rem; 
+            margin-bottom: 10px; 
+        }
+        h1 { 
+            color: #d4af37; 
+            font-size: 1.8rem; 
+            letter-spacing: 3px; 
+            margin-bottom: 8px;
+            font-weight: 300;
+        }
+        .subtitle {
+            color: #a0b4c8;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .ar-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .product-preview {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        .product-name { 
+            color: #d4af37; 
+            font-size: 1.3rem; 
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .product-desc {
+            color: #a0b4c8;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .ar-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: #d4af37;
             color: #0a1628;
-            padding: 20px 40px;
-            border-radius: 30px;
+            padding: 18px 36px;
+            border-radius: 50px;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 600;
             text-decoration: none;
-            margin-bottom: 15px;
-            width: 100%;
-            max-width: 300px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .note { color: #6b8cae; font-size: 0.75rem; margin-top: 20px; }
-        .product-img {
-            width: 150px;
-            height: 150px;
-            background: #1a2744;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
+        .ar-button:active {
+            transform: scale(0.95);
+        }
+        .ar-icon {
+            font-size: 1.4rem;
+        }
+        .note { 
+            color: #6b8cae; 
+            font-size: 0.75rem; 
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+        .note strong {
+            color: #a0b4c8;
+        }
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: #d4af37;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
     <div class="logo">⚓</div>
-    <h1>Nautilus Decor</h1>
-    <div class="product-name">Copo de Acrílico Premium</div>
-    <p>Toque no botão abaixo para ver o produto em Realidade Aumentada no seu iPad</p>
+    <h1>NAUTILUS DECOR</h1>
+    <div class="subtitle">REALIDADE AUMENTADA</div>
     
-    <!-- Link AR com modelo de copo/copo -->
-    <a href="https://developer.apple.com/augmented-reality/quick-look/models/cupandsaucer/cupandsaucer.usdz" 
-       rel="ar" 
-       class="ar-link">
-        🥽 Ver em AR
-    </a>
+    <div class="ar-container">
+        <div class="product-preview">🫖</div>
+        <div class="product-name">Bule Premium</div>
+        <div class="product-desc">
+            Toque no botão abaixo para visualizar<br>
+            o produto em AR no seu ambiente
+        </div>
+        <!-- Link AR Quick Look Apple -->
+        <a href="https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz" 
+           rel="ar"
+           class="ar-button">
+            <span class="ar-icon">🥽</span>
+            <span>Ver em AR</span>
+        </a>
+    </div>
     
-    <p class="note">Funciona no Safari do iPad/iPhone<br>iOS 12 ou superior</p>
+    <div class="divider"></div>
+    
+    <p class="note">
+        <strong>Requisitos:</strong><br>
+        Safari no iPhone ou iPad<br>
+        iOS 12 ou superior<br>
+        Câmera habilitada
+    </p>
 </body>
 </html>
