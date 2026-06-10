@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautilus Decor AR</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Georgia, serif;
+            background: #0a1628;
+            color: #f4f1ea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo { font-size: 4rem; margin-bottom: 10px; }
+        h1 { color: #d4af37; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px; }
+        p { color: #a0b4c8; font-size: 0.9rem; margin-bottom: 30px; max-width: 300px; line-height: 1.5; }
+        .ar-link {
+            display: block;
+            background: #d4af37;
+            color: #0a1628;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .note { color: #6b8cae; font-size: 0.75rem; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="logo">⚓</div>
+    <h1>Nautilus Decor</h1>
+    <p>Toque no botão abaixo para ver o produto em Realidade Aumentada no seu iPad</p>
+    
+    <a href="https://developer.apple.com/augmented-reality/quick-look/models/stratocaster/usdz/stratocaster.usdz" 
+       rel="ar" 
+       class="ar-link">
+        🥽 Ver em AR
+    </a>
+    
+    <p class="note">Funciona no Safari do iPad/iPhone<br>iOS 12 ou superior</p>
+</body>
+</html>
