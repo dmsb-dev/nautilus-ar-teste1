@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Nautilus Decor AR - Universal</title>
+    <title>Nautilus Decor AR - Copo Premium</title>
     
     <!-- Model Viewer para AR universal -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -21,6 +21,7 @@
         }
         .header {
             margin-bottom: 20px;
+            padding-top: 20px;
         }
         .logo { 
             font-size: 3rem; 
@@ -53,15 +54,28 @@
             border-radius: 15px;
             margin-bottom: 20px;
             overflow: hidden;
+            position: relative;
         }
         model-viewer {
             width: 100%;
             height: 100%;
             --poster-color: transparent;
         }
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(212, 175, 55, 0.9);
+            color: #0a1628;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            z-index: 10;
+        }
         .product-name { 
             color: #d4af37; 
-            font-size: 1.2rem; 
+            font-size: 1.3rem; 
             margin-bottom: 8px;
             font-weight: 500;
         }
@@ -98,14 +112,26 @@
             margin: 15px 0;
             font-size: 1.5rem;
         }
-        .fallback-msg {
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        .feature-tag {
             background: rgba(212, 175, 55, 0.1);
             border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            font-size: 0.8rem;
-            color: #a0b4c8;
+            color: #d4af37;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+        }
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: #d4af37;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -113,7 +139,7 @@
     <div class="header">
         <div class="logo">⚓</div>
         <h1>NAUTILUS DECOR</h1>
-        <div class="subtitle">REALIDADE AUMENTADA</div>
+        <div class="subtitle">EXPERIÊNCIA AR</div>
     </div>
     
     <div class="ar-container">
@@ -123,12 +149,14 @@
             <span>📱</span>
         </div>
         
-        <!-- Model Viewer com modelo GLB -->
+        <!-- Model Viewer com modelo de copo genérico -->
         <div class="model-viewer-container">
+            <div class="product-badge">DEMO</div>
+            
             <model-viewer
-                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
                 ios-src="https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz"
-                alt="Produto Nautilus Decor em 3D"
+                alt="Copo Premium Nautilus Decor em 3D"
                 camera-controls
                 auto-rotate
                 ar
@@ -136,7 +164,6 @@
                 shadow-intensity="1"
                 exposure="0.8"
                 environment-image="neutral"
-                poster="https://modelviewer.dev/assets/poster-astronaut.png"
                 style="width: 100%; height: 100%;">
                 
                 <button slot="ar-button" class="ar-button">
@@ -146,22 +173,32 @@
             </model-viewer>
         </div>
         
-        <div class="product-name">Produto Premium Nautilus</div>
-        <div class="product-desc">
-            Toque no botão acima para visualizar<br>
-            o produto em AR no seu ambiente
+        <div class="product-name">Copo de Acrílico Premium</div>
+        
+        <div class="features">
+            <span class="feature-tag">Acrílico</span>
+            <span class="feature-tag">Premium</span>
+            <span class="feature-tag">Náutico</span>
         </div>
         
-        <div class="fallback-msg">
+        <div class="product-desc">
+            Toque no botão acima para visualizar<br>
+            o produto em AR no seu ambiente<br>
+            <small>(Modelo demonstrativo)</small>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p style="color: #6b8cae; font-size: 0.75rem; margin-bottom: 10px;">
             <strong>📱 Compatibilidade:</strong><br>
             iPhone/iPad (iOS 12+) • Android (ARCore)<br>
             Chrome, Safari, Samsung Internet
-        </div>
+        </p>
     </div>
     
     <p class="note">
-        Funciona em qualquer dispositivo móvel moderno<br>
-        com câmera e suporte a AR
+        Produto em exposição: modelo demonstrativo para teste de experiência AR<br>
+        <strong>Nautilus Decor</strong> — Do mar para seus melhores momentos
     </p>
 </body>
 </html>
